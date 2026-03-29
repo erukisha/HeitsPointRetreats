@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retreats | Heit's Point Lutheran Ministries</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f9f3ea;
+      color: #2f261d;
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-title {
+      font-size: 46px;
+      line-height: 1.06;
+      color: #2f261d;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      max-width: 860px;
+      margin: 0 auto 36px;
+      text-align: center;
+      font-size: 18px;
+      color: #5f5042;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #9d6f2d;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #f0b95e;
+      color: #2c241c;
+    }
+
+    .btn-primary:hover {
+      background: #f4c572;
+    }
+
+    .btn-secondary {
+      background: #fff4df;
+      color: #7b5522;
+      border-color: #e7c99d;
+    }
+
+    .btn-secondary:hover {
+      background: #ffefd1;
+    }
+
+    .divider {
+      width: min(1180px, calc(100% - 40px));
+      height: 1px;
+      margin: 0 auto;
+      background: linear-gradient(to right, transparent, #dfccb3, transparent);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 90px 0 110px;
+      background:
+        linear-gradient(rgba(38, 28, 18, 0.36), rgba(38, 28, 18, 0.46)),
+        url("RetreatBackground.png") center center / cover no-repeat;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-logo {
+      width: 150px;
+      margin-bottom: 22px;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.24));
+    }
+
+    .hero h1 {
+      font-size: 68px;
+      line-height: 0.96;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 20px;
+      color: #f8f2ea;
+      margin-bottom: 28px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(8px);
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 18px 36px rgba(44,36,28,0.16);
+    }
+
+    .hero-card h3 {
+      font-size: 30px;
+      line-height: 1.08;
+      margin-bottom: 14px;
+      color: #fffaf2;
+    }
+
+    .hero-card p {
+      font-size: 16px;
+      color: #fff7ef;
+      margin-bottom: 16px;
+    }
+
+    .hero-quick-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hero-quick-list li {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.14);
+      color: #fffaf3;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    /* QUICK ACCESS */
+    .quick-access-wrap {
+      margin-top: -42px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .quick-access {
+      background: linear-gradient(135deg, #fff7ea 0%, #fff1d8 100%);
+      border: 1px solid #ecd5af;
+      border-radius: 30px;
+      box-shadow: 0 18px 36px rgba(44,36,28,0.10);
+      padding: 28px;
+    }
+
+    .quick-access-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .quick-access-top h2 {
+      font-size: 32px;
+      color: #2f261d;
+    }
+
+    .quick-access-top p {
+      max-width: 620px;
+      font-size: 17px;
+      color: #5e5042;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .quick-link-card {
+      background: #ffffff;
+      border: 1px solid #ecd9b8;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(44,36,28,0.05);
+    }
+
+    .quick-link-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #2f261d;
+    }
+
+    .quick-link-card p {
+      font-size: 14px;
+      color: #645547;
+      margin-bottom: 12px;
+    }
+
+    .quick-link-card a {
+      font-size: 14px;
+      font-weight: bold;
+      color: #8a5d20;
+    }
+
+    /* WELCOME */
+    .welcome-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .welcome-photo {
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 14px 32px rgba(44,36,28,0.11);
+      background: #d9c19e;
+    }
+
+    .welcome-photo img {
+      min-height: 520px;
+      object-fit: cover;
+      height: 100%;
+    }
+
+    .welcome-content h2 {
+      font-size: 48px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: #2f261d;
+    }
+
+    .welcome-content p {
+      font-size: 18px;
+      color: #5a4b3f;
+      margin-bottom: 18px;
+    }
+
+    .welcome-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .welcome-pills span {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #fff0d2;
+      border: 1px solid #e8c992;
+      color: #7a5523;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* RETREAT TYPES */
+    .retreats-section {
+      background: linear-gradient(180deg, #f4e8d7 0%, #f9f3ea 100%);
+    }
+
+    .retreat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .retreat-card {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 26px rgba(44,36,28,0.08);
+      background: #ffffff;
+      border: 1px solid #e9dcc6;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .retreat-card img {
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .retreat-card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .retreat-card-content h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #2f261d;
+    }
+
+    .retreat-card-content p {
+      font-size: 16px;
+      color: #5a4b3f;
+      margin-bottom: 16px;
+    }
+
+    .retreat-bullets {
+      display: grid;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .retreat-bullets div {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff4e2;
+      border: 1px solid #edd3a8;
+      font-size: 14px;
+      font-weight: bold;
+      color: #654d33;
+    }
+
+    /* BUILD YOUR OWN */
+    .build-section {
+      background: #fffaf1;
+    }
+
+    .build-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .build-main {
+      background: linear-gradient(135deg, #fff3dc 0%, #ffe3b5 100%);
+      border: 1px solid #e8c88f;
+      border-radius: 30px;
+      padding: 32px;
+      box-shadow: 0 12px 26px rgba(44,36,28,0.07);
+    }
+
+    .build-main h2 {
+      font-size: 42px;
+      line-height: 1.06;
+      margin-bottom: 14px;
+      color: #2f261d;
+    }
+
+    .build-main p {
+      font-size: 17px;
+      color: #5a4b3f;
+      margin-bottom: 16px;
+    }
+
+    .build-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .build-point {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #e9cf9f;
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #614a31;
+    }
+
+    .build-side {
+      display: grid;
+      gap: 16px;
+    }
+
+    .build-side-card {
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 22px rgba(44,36,28,0.07);
+    }
+
+    .build-side-card.blue {
+      background: linear-gradient(135deg, #d8eef7 0%, #bde1ef 100%);
+    }
+
+    .build-side-card.green {
+      background: linear-gradient(135deg, #e1f4da 0%, #cbeabf 100%);
+    }
+
+    .build-side-card.orange {
+      background: linear-gradient(135deg, #ffe7c0 0%, #ffd291 100%);
+    }
+
+    .build-side-card h3 {
+      font-size: 24px;
+      margin-bottom: 9px;
+      color: #2f261d;
+    }
+
+    .build-side-card p {
+      font-size: 15px;
+      color: #51463b;
+    }
+
+    /* LODGING */
+    .lodging-section {
+      background: linear-gradient(180deg, #eef6fb 0%, #f9f3ea 100%);
+    }
+
+    .lodging-top {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .lodging-top h2 {
+      font-size: 46px;
+      line-height: 1.06;
+      color: #2f261d;
+      margin-bottom: 12px;
+    }
+
+    .lodging-top p {
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #5a4b3f;
+    }
+
+    .lodging-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .lodging-card {
+      background: #ffffff;
+      border: 1px solid #d7e7ef;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(44,36,28,0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lodging-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .lodging-card-body {
+      padding: 22px;
+    }
+
+    .lodging-card h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+      color: #2f261d;
+    }
+
+    .lodging-card .lodging-type {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #7c674d;
+      margin-bottom: 10px;
+    }
+
+    .lodging-card p {
+      font-size: 15px;
+      color: #5a4b3f;
+      margin-bottom: 7px;
+    }
+
+    .lodging-card strong {
+      color: #2f261d;
+    }
+
+    .amenities-box {
+      background: linear-gradient(135deg, #fff8ea 0%, #ffe8be 100%);
+      border: 1px solid #ead2a1;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 12px 24px rgba(44,36,28,0.06);
+    }
+
+    .amenities-box h3 {
+      font-size: 30px;
+      margin-bottom: 12px;
+      color: #2f261d;
+    }
+
+    .amenities-box p {
+      font-size: 17px;
+      color: #5a4b3f;
+      margin-bottom: 16px;
+    }
+
+    .amenities-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .amenities-pills span {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #e8cd9a;
+      color: #6a512f;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* WHAT TO EXPECT */
+    .expect-layout {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .expect-main {
+      background: #ffffff;
+      border: 1px solid #e8dbc5;
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: 0 12px 28px rgba(44,36,28,0.08);
+    }
+
+    .expect-main h2 {
+      font-size: 44px;
+      line-height: 1.06;
+      margin-bottom: 14px;
+      color: #2f261d;
+    }
+
+    .expect-main p {
+      font-size: 17px;
+      color: #5a4b3f;
+      margin-bottom: 16px;
+    }
+
+    .expect-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .expect-item {
+      padding: 18px;
+      border-radius: 20px;
+      background: #f7efe1;
+      border: 1px solid #ead7ba;
+    }
+
+    .expect-item h4 {
+      font-size: 18px;
+      margin-bottom: 7px;
+      color: #2f261d;
+    }
+
+    .expect-item p {
+      font-size: 15px;
+      color: #5b4c3f;
+      margin: 0;
+    }
+
+    .expect-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .expect-side-card {
+      border-radius: 26px;
+      padding: 26px;
+      color: #2f261d;
+      box-shadow: 0 10px 24px rgba(44,36,28,0.08);
+    }
+
+    .expect-side-card.orange {
+      background: linear-gradient(135deg, #ffd989 0%, #f1b85d 100%);
+    }
+
+    .expect-side-card.blue {
+      background: linear-gradient(135deg, #d9eff7 0%, #b9dff0 100%);
+    }
+
+    .expect-side-card.green {
+      background: linear-gradient(135deg, #dff2d8 0%, #c5e7b7 100%);
+    }
+
+    .expect-side-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #2f261d;
+    }
+
+    .expect-side-card p {
+      font-size: 15px;
+      color: #4e4338;
+    }
+
+    /* PLAN */
+    .plan-section {
+      background: linear-gradient(180deg, #f2b95e 0%, #dd9956 100%);
+      color: #2f261d;
+    }
+
+    .plan-box {
+      max-width: 1020px;
+      margin: 0 auto;
+      background: #fffaf1;
+      border-radius: 34px;
+      padding: 48px 38px;
+      box-shadow: 0 18px 34px rgba(44,36,28,0.14);
+      text-align: center;
+    }
+
+    .plan-logo {
+      width: 112px;
+      margin: 0 auto 18px;
+    }
+
+    .plan-box h2 {
+      font-size: 48px;
+      line-height: 1.04;
+      margin-bottom: 14px;
+      color: #2f261d;
+    }
+
+    .plan-box p {
+      max-width: 760px;
+      margin: 0 auto 16px;
+      font-size: 18px;
+      color: #5a4b3f;
+    }
+
+    .plan-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+      text-align: left;
+    }
+
+    .plan-step {
+      background: #fff1da;
+      border: 1px solid #e8c899;
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .plan-step h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #2f261d;
+    }
+
+    .plan-step p {
+      font-size: 15px;
+      margin: 0;
+      color: #5c4d40;
+    }
+
+    .contact-info {
+      margin-top: 26px;
+      font-size: 17px;
+      color: #3f342a;
+    }
+
+    .contact-info a {
+      color: #7c5418;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-inner,
+      .welcome-layout,
+      .build-layout,
+      .expect-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links,
+      .retreat-grid,
+      .lodging-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .plan-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .welcome-photo img {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero h1,
+      .welcome-content h2,
+      .expect-main h2,
+      .plan-box h2,
+      .section-title,
+      .lodging-top h2,
+      .build-main h2 {
+        font-size: 36px;
+      }
+
+      .hero p,
+      .welcome-content p,
+      .expect-main p,
+      .plan-box p,
+      .section-subtitle,
+      .lodging-top p,
+      .build-main p {
+        font-size: 17px;
+      }
+
+      .quick-links,
+      .retreat-grid,
+      .lodging-grid,
+      .build-points,
+      .expect-items,
+      .plan-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-access,
+      .expect-main,
+      .plan-box,
+      .hero-card,
+      .build-main,
+      .amenities-box {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <img src="Logo.png" alt="Heit's Point Logo" class="hero-logo">
+        <div class="eyebrow" style="color:#ffe0a0;">Heit’s Point Lutheran Ministries</div>
+        <h1>Bring your group somewhere they will want to come back to.</h1>
+        <p>
+          Retreats at Heit’s Point are welcoming, memorable, faith filled, and easy to shape around your group.
+          Whether you want a peaceful family getaway, a meaningful church retreat, or a focused weekend for your students,
+          this is a place where people can reconnect, grow, and enjoy being together.
+        </p>
+        <div class="btn-row">
+          <a href="#plan-retreat" class="btn btn-primary">Start Planning Your Retreat</a>
+          <a href="#retreat-types" class="btn btn-secondary">See Retreat Options</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Quick Retreat Info</h3>
+        <p>No digging through the page to find what you need. Here is the main stuff up front.</p>
+        <ul class="hero-quick-list">
+          <li>Family, Church Group, Catechism, Youth, College, and Team Building Retreats</li>
+          <li>Build your own custom retreat format</li>
+          <li>Hotel style rooms, bunkhouses, cabins, RV sites, and tent sites</li>
+          <li>Easy contact info and planning section at the bottom</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="quick-access-wrap">
+    <div class="container">
+      <div class="quick-access">
+        <div class="quick-access-top">
+          <div>
+            <h2>Find what you need fast</h2>
+            <p>
+              This page is built to help retreat leaders quickly see what kinds of retreats fit best here,
+              what lodging options are available, and how to start planning.
+            </p>
+          </div>
+        </div>
+
+        <div class="quick-links">
+          <div class="quick-link-card">
+            <h3>Retreat Types</h3>
+            <p>See the main kinds of retreats that fit best at Heit’s Point.</p>
+            <a href="#retreat-types">Jump to Retreat Types</a>
+          </div>
+
+          <div class="quick-link-card">
+            <h3>Build Your Own</h3>
+            <p>Create a retreat around your group’s exact goals and style.</p>
+            <a href="#build-your-own">Jump to Custom Retreats</a>
+          </div>
+
+          <div class="quick-link-card">
+            <h3>Lodging & Amenities</h3>
+            <p>Get the main details on places to stay and available site options.</p>
+            <a href="#lodging">Jump to Lodging</a>
+          </div>
+
+          <div class="quick-link-card">
+            <h3>Plan Your Retreat</h3>
+            <p>Ready to reach out? Here is the contact section and next steps.</p>
+            <a href="#plan-retreat">Jump to Planning</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="welcome-layout">
+        <div class="welcome-photo">
+          <img src="RetreatWelcome.png" alt="Welcoming retreat scene at Heit's Point">
+        </div>
+
+        <div class="welcome-content">
+          <div class="eyebrow">Why groups love it here</div>
+          <h2>A retreat setting that feels warm, peaceful, and easy to enjoy.</h2>
+          <p>
+            Heit’s Point is the kind of place that helps groups settle in quickly. It feels welcoming instead of formal,
+            memorable instead of generic, and peaceful without feeling empty. That matters when you are trying to create
+            a retreat your people will actually enjoy.
+          </p>
+          <p>
+            The Lake of the Ozarks setting, the Christian atmosphere, and the room for both fellowship and rest all work
+            together to make retreats here feel meaningful. Whether your group wants worship, community, conversation,
+            fun, or simply time away together, Heit’s Point gives you a place where that can happen naturally.
+          </p>
+          <p>
+            Instead of trying to force a certain kind of weekend, this is a place that lets your retreat feel personal,
+            welcoming, and built around your group.
+          </p>
+
+          <div class="welcome-pills">
+            <span>Beautiful setting</span>
+            <span>Faith centered</span>
+            <span>Group friendly</span>
+            <span>Easy to enjoy</span>
+            <span>Peaceful atmosphere</span>
+            <span>Memorable weekends</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section retreats-section" id="retreat-types">
+    <div class="container">
+      <h2 class="section-title">Retreats that fit especially well at Heit’s Point</h2>
+      <p class="section-subtitle">
+        These retreat types match the atmosphere here really well and are some of the easiest for groups to picture,
+        plan, and enjoy.
+      </p>
+
+      <div class="retreat-grid">
+        <div class="retreat-card">
+          <img src="FamilyRetreat.png" alt="Family retreat">
+          <div class="retreat-card-content">
+            <h3>Family Retreats</h3>
+            <p>
+              A great fit for families who want meaningful time together, shared experiences, faith centered moments,
+              and a place where all ages can enjoy being together.
+            </p>
+            <div class="retreat-bullets">
+              <div>Multi generational connection</div>
+              <div>Shared memories and fellowship</div>
+              <div>Relaxed and welcoming atmosphere</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="retreat-card">
+          <img src="ChurchGroupRetreat.png" alt="Church group retreat">
+          <div class="retreat-card-content">
+            <h3>Church Group Retreats</h3>
+            <p>
+              A wonderful option for congregations, Bible studies, ministry groups, and church communities
+              wanting time together for worship, fellowship, encouragement, and renewal.
+            </p>
+            <div class="retreat-bullets">
+              <div>Great for church communities</div>
+              <div>Worship and fellowship together</div>
+              <div>Encouraging shared retreat time</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="retreat-card">
+          <img src="CatechismRetreat.png" alt="Catechism retreat">
+          <div class="retreat-card-content">
+            <h3>Catechism Retreats</h3>
+            <p>
+              A strong setting for focused learning, deeper faith conversations, worship, and Christian community
+              away from the usual distractions.
+            </p>
+            <div class="retreat-bullets">
+              <div>Teaching and discussion time</div>
+              <div>Faith growth in community</div>
+              <div>Great for student groups</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="retreat-card">
+          <img src="YouthRetreat.png" alt="Youth retreat">
+          <div class="retreat-card-content">
+            <h3>Youth Retreats</h3>
+            <p>
+              Perfect for youth groups wanting worship, games, Bible study, connection, and the kind of shared weekend
+              students remember long after it is over.
+            </p>
+            <div class="retreat-bullets">
+              <div>Friendship building</div>
+              <div>Faith and fun together</div>
+              <div>Meaningful shared experiences</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="retreat-card">
+          <img src="CollegeRetreat.png" alt="College retreat">
+          <div class="retreat-card-content">
+            <h3>College Retreats</h3>
+            <p>
+              A refreshing option for young adults who need time to reconnect, slow down, build community, and be
+              spiritually encouraged in a busy season of life.
+            </p>
+            <div class="retreat-bullets">
+              <div>Rest and renewal</div>
+              <div>Young adult community</div>
+              <div>Deeper faith conversations</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="retreat-card">
+          <img src="TeamBuildingRetreat.png" alt="Team building retreat">
+          <div class="retreat-card-content">
+            <h3>Team Building Retreats</h3>
+            <p>
+              Great for groups that want to strengthen trust, reconnect, develop leadership, and create stronger unity
+              in a focused but enjoyable environment.
+            </p>
+            <div class="retreat-bullets">
+              <div>Leadership and team connection</div>
+              <div>Encouraging group momentum</div>
+              <div>Purposeful time together</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section build-section" id="build-your-own">
+    <div class="container">
+      <div class="build-layout">
+        <div class="build-main">
+          <div class="eyebrow">Build Your Own Retreat</div>
+          <h2>Need something a little different? Build your own retreat.</h2>
+          <p>
+            Not every group fits neatly into one category, and that is completely okay. Heit’s Point is a great place
+            to create a retreat that is shaped around your own goals, group size, age range, and weekend vision.
+          </p>
+          <p>
+            Some groups want more worship and study. Others want more fellowship, lake time, conversation, relaxation,
+            or leadership focus. Some want a little of everything. This flexibility makes it easier to create a retreat
+            that actually fits your people well.
+          </p>
+          <p>
+            If your group does not fit one of the retreat ideas above exactly, we would still love to help you plan
+            something meaningful.
+          </p>
+
+          <div class="build-points">
+            <div class="build-point">Shape the retreat around your group</div>
+            <div class="build-point">Choose the tone and focus you want</div>
+            <div class="build-point">Great for unique church or community groups</div>
+            <div class="build-point">Easy way to make the weekend feel personal</div>
+          </div>
+        </div>
+
+        <div class="build-side">
+          <div class="build-side-card blue">
+            <h3>Worship Focused</h3>
+            <p>A retreat centered on worship, Bible study, devotion time, and spiritual renewal.</p>
+          </div>
+
+          <div class="build-side-card green">
+            <h3>Connection Focused</h3>
+            <p>A weekend built around fellowship, relationships, group bonding, and simply being together well.</p>
+          </div>
+
+          <div class="build-side-card orange">
+            <h3>Balanced Retreat</h3>
+            <p>A mix of faith, fun, rest, lake time, and shared experiences that fits your group naturally.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section lodging-section" id="lodging">
+    <div class="container">
+      <div class="lodging-top">
+        <div class="eyebrow">Lodging & Amenities</div>
+        <h2>Places for your group to stay</h2>
+        <p>
+          Heit’s Point offers a variety of lodging options for both large and small groups, making it easier
+          to find a setup that fits your retreat well. Add your photos to each option below so guests can
+          quickly picture where they might stay.
+        </p>
+      </div>
+
+      <div class="lodging-grid">
+        <div class="lodging-card">
+          <img src="SpitzRetreatCenter.png" alt="Spitz Retreat Center">
+          <div class="lodging-card-body">
+            <h3>Spitz Retreat Center</h3>
+            <div class="lodging-type">Hotel Like Rooms</div>
+            <p><strong>Rate:</strong> $90/night for the first two guests</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="BlunkBunkhouse.png" alt="Blunk Bunkhouse">
+          <div class="lodging-card-body">
+            <h3>Blunk Bunkhouse</h3>
+            <div class="lodging-type">Bunkhouse</div>
+            <p><strong>Rate:</strong> $20/night per person</p>
+            <p><strong>Minimum:</strong> $100</p>
+            <p><strong>Sleeps:</strong> 60</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="GospelHostel.png" alt="Gospel Hostel">
+          <div class="lodging-card-body">
+            <h3>Gospel Hostel</h3>
+            <div class="lodging-type">Bunkhouse</div>
+            <p><strong>Rate:</strong> $20/night per person</p>
+            <p><strong>Minimum:</strong> $100</p>
+            <p><strong>Sleeps:</strong> 48</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="GCL.png" alt="GCL bunkhouse">
+          <div class="lodging-card-body">
+            <h3>GCL</h3>
+            <div class="lodging-type">Bunkhouse · God Changes Lives!</div>
+            <p><strong>Rate:</strong> $20/night per person</p>
+            <p><strong>Minimum:</strong> $100</p>
+            <p><strong>Sleeps:</strong> 20</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="BellHouse.png" alt="Bell House">
+          <div class="lodging-card-body">
+            <h3>Bell House</h3>
+            <div class="lodging-type">Bunkhouse</div>
+            <p><strong>Rate:</strong> $20/night per person</p>
+            <p><strong>Minimum:</strong> $100</p>
+            <p><strong>Sleeps:</strong> 24</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="Cabin1.png" alt="Cabin 1">
+          <div class="lodging-card-body">
+            <h3>Cabin #1</h3>
+            <div class="lodging-type">Cabin</div>
+            <p><strong>Sleeps:</strong> 8</p>
+            <p><strong>Rate:</strong> $90/night for the first two guests</p>
+            <p><strong>Additional Guests:</strong> $20 per person after that</p>
+            <p><strong>Kids 4 and under:</strong> Free</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="LakeFrontCabin2.png" alt="Lake Front Cabin 2">
+          <div class="lodging-card-body">
+            <h3>Lake Front Cabin #2</h3>
+            <div class="lodging-type">Cabin</div>
+            <p><strong>Sleeps:</strong> 4</p>
+            <p><strong>Rate:</strong> $90/night for the first two guests</p>
+            <p><strong>Additional Guests:</strong> $20 per person after that</p>
+            <p><strong>Kids 4 and under:</strong> Free</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="LakeFrontCabin3.png" alt="Lake Front Cabin 3">
+          <div class="lodging-card-body">
+            <h3>Lake Front Cabin #3</h3>
+            <div class="lodging-type">Cabin</div>
+            <p><strong>Sleeps:</strong> 6</p>
+            <p><strong>Rate:</strong> $90/night for the first two guests</p>
+            <p><strong>Additional Guests:</strong> $20 per person after that</p>
+            <p><strong>Kids 4 and under:</strong> Free</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="OriginalHeitmanHouse.png" alt="Original Heitman House">
+          <div class="lodging-card-body">
+            <h3>Original Heitman House</h3>
+            <div class="lodging-type">House</div>
+            <p><strong>Sleeps:</strong> 2</p>
+            <p><strong>Rate:</strong> $90/night</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="RVSites.png" alt="RV and Camper Sites">
+          <div class="lodging-card-body">
+            <h3>RV &amp; Camper Sites</h3>
+            <div class="lodging-type">RV Sites</div>
+            <p><strong>Sites Available:</strong> 17</p>
+            <p><strong>Rate:</strong> $40/night</p>
+            <p><strong>Includes:</strong> 30 or 50 amp electric, full water and sewer hookups, fire ring, picnic table</p>
+          </div>
+        </div>
+
+        <div class="lodging-card">
+          <img src="TentSites.png" alt="Tent Sites">
+          <div class="lodging-card-body">
+            <h3>Tent Sites</h3>
+            <div class="lodging-type">Tent Camping</div>
+            <p><strong>Rate:</strong> $15/night</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="amenities-box">
+        <h3>Retreat Amenities</h3>
+        <p>
+          In addition to lodging, Heit’s Point offers amenities that help make retreat weekends more enjoyable,
+          memorable, and full of shared experiences for your group.
+        </p>
+
+        <div class="amenities-pills">
+          <span>Lake Access</span>
+          <span>Gymnasium</span>
+          <span>Archery Range</span>
+          <span>Prayer Trail</span>
+          <span>Dining Area</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section" id="what-to-expect">
+    <div class="container">
+      <div class="expect-layout">
+        <div class="expect-main">
+          <div class="eyebrow">What your group can expect</div>
+          <h2>An experience that feels easy to enjoy and worth coming for.</h2>
+          <p>
+            Retreats at Heit’s Point are not just about having a place to stay. They are about giving your group a setting
+            where people can be together well. That might mean worship, study, prayer, campfires, fun, lake time,
+            conversation, or simply slowing down enough to enjoy being together.
+          </p>
+          <p>
+            The goal is to make your retreat feel welcoming, memorable, and meaningful from the moment your group arrives.
+          </p>
+
+          <div class="expect-items">
+            <div class="expect-item">
+              <h4>Faith centered atmosphere</h4>
+              <p>Worship, prayer, Bible study, and spiritual encouragement fit naturally here.</p>
+            </div>
+
+            <div class="expect-item">
+              <h4>Strong group connection</h4>
+              <p>A setting that helps conversations happen and relationships deepen.</p>
+            </div>
+
+            <div class="expect-item">
+              <h4>Rest and renewal</h4>
+              <p>A peaceful place to step away from routine and come back refreshed.</p>
+            </div>
+
+            <div class="expect-item">
+              <h4>Memorable shared experiences</h4>
+              <p>The kind of moments your group will talk about after the retreat is over.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="expect-side">
+          <div class="expect-side-card orange">
+            <h3>Welcoming for first time groups</h3>
+            <p>
+              You do not need your retreat to be complicated for it to be meaningful. This page and the planning process
+              are built to make things feel simple and approachable.
+            </p>
+          </div>
+
+          <div class="expect-side-card blue">
+            <h3>Built for both fun and depth</h3>
+            <p>
+              A retreat here can include both meaningful faith moments and the relaxed enjoyment that helps groups bond.
+            </p>
+          </div>
+
+          <div class="expect-side-card green">
+            <h3>Easy to picture your group here</h3>
+            <p>
+              Families, students, young adults, church groups, and leaders can all see how this setting could fit them well.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section plan-section" id="plan-retreat">
+    <div class="container">
+      <div class="plan-box">
+        <img src="Logo.png" alt="Heit's Point Logo" class="plan-logo">
+        <div class="eyebrow">Plan your retreat</div>
+        <h2>Ready to talk about bringing your group here?</h2>
+        <p>
+          Whether you are planning a family retreat, church group retreat, catechism retreat, youth weekend,
+          college retreat, team building experience, or a custom retreat, we would love to help you start shaping it.
+        </p>
+
+        <div class="plan-steps">
+          <div class="plan-step">
+            <h3>1. Reach out</h3>
+            <p>Send us an email and tell us what kind of group you have in mind.</p>
+          </div>
+
+          <div class="plan-step">
+            <h3>2. Share your retreat goals</h3>
+            <p>Let us know what kind of experience you want your group to have.</p>
+          </div>
+
+          <div class="plan-step">
+            <h3>3. Start planning</h3>
+            <p>We can help you move toward a retreat that fits your people well.</p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="justify-content:center; margin-top: 8px;">
+          <a href="mailto:Info@HeitsPointLutheran.org" class="btn btn-primary">Contact Us About Retreats</a>
+        </div>
+
+        <div class="contact-info">
+          <strong>Heit’s Point Lutheran Ministries</strong><br>
+         28345 Heits Point Ave. Lincoln, Missouri 65338<br>
+          Email: <a href="mailto:Info@HeitsPointLutheran.org">Info@HeitsPointLutheran.org</a><br>
+          Phone: <a href="tel:6606682363">660-668-2363</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<footer style="background:linear-gradient(135deg,#1f3b2d,#2e5a43); color:#f5f1e8; padding:35px 15px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <div style="max-width:1100px; margin:0 auto;">
+
+    <!-- Title -->
+    <div style="text-align:center; margin-bottom:25px;">
+      <h2 style="margin:0; font-size:26px; letter-spacing:1px; color:#f3d58a;">
+        HEIT'S POINT LUTHERAN MINISTRIES
+      </h2>
+    </div>
+
+    <!-- Content -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:25px; font-size:14px;">
+
+      <!-- Mission -->
+      <div style="flex:1; min-width:220px;">
+        <h3 style="margin-bottom:8px; font-size:16px; color:#f3d58a;">Mission</h3>
+        <p style="margin:0; line-height:1.6;">
+          Strengthening your Connection with Christ, the Vine
+        </p>
+        <p style="margin-top:4px; font-size:13px; color:#d8c9a8;">
+          John 15:5
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div style="flex:1; min-width:220px;">
+        <h3 style="margin-bottom:8px; font-size:16px; color:#f3d58a;">Contact</h3>
+
+        <p style="margin:0 0 6px;">
+          28345 Heits Point Ave.<br>
+          Lincoln, MO 65338
+        </p>
+
+        <p style="margin:0 0 6px;">
+          <a href="tel:6606682363" style="color:#f5f1e8; text-decoration:none;">
+            📞 660-668-2363
+          </a>
+        </p>
+
+        <p style="margin:0;">
+          <a href="mailto:info@heitspointlutheran.org" style="color:#f5f1e8; text-decoration:none;">
+            ✉️ info@heitspointlutheran.org
+          </a>
+        </p>
+      </div>
+
+      <!-- Social -->
+      <div style="flex:1; min-width:180px;">
+        <h3 style="margin-bottom:8px; font-size:16px; color:#f3d58a;">Follow</h3>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/heitspointlutherancamp" target="_blank"
+           style="display:flex; align-items:center; gap:8px; margin-bottom:8px; text-decoration:none; color:#f5f1e8;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9v-2.9h2.6V9.4c0-2.6 1.5-4 3.8-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.8h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
+          </svg>
+          Facebook
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/heitspointlutheran/" target="_blank"
+           style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#f5f1e8;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 13 5.5 5.5 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 13 3.5 3.5 0 0 1 12 16.5zM17.8 6.2a1.2 1.2 0 1 0 1.2 1.2 1.2 1.2 0 0 0-1.2-1.2z"/>
+          </svg>
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+</html>
